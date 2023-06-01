@@ -1,0 +1,267 @@
+:root {
+  --color-accent: #43abf0;
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+body {
+  background: #272733;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.text--accent {
+  color: var(--color-accent);
+}
+
+.text--dark {
+  color: var(--color-black);
+}
+
+.text--secondary {
+  color: #bbbbbb;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 183px;
+  height: 42px;
+  border-radius: 4px;
+  padding: 0 4px;
+  color: var(--color-white);
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  @media (max-width: 960px) {
+    height: 36px;
+  }
+
+  &--blue {
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-white);
+  }
+
+  &--white {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+  }
+
+  &--icon {
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.5;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    transition: all 0.3s;
+  }
+}
+
+input[type='text'],
+input[type='email'] {
+  padding: 12px 24px 12px 10px;
+  width: 100%;
+}
+
+// Range input styles
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type='range'] {
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 3px solid #286690;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+    margin-top: -8px;
+  }
+
+  &::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: 3px solid #286690;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+  }
+
+  &::-ms-thumb {
+    -webkit-appearance: none;
+    border: 3px solid #286690;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    cursor: pointer;
+  }
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #bebec1;
+  border-radius: 4px;
+  border: 1px solid var(--color-white);
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #bebec1;
+  border-radius: 4px;
+  border: 1px solid var(--color-white);
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #bebec1;
+  border-radius: 4px;
+  border: 1px solid var(--color-white);
+}
+
+input[type='range']::-ms-fill-lower {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #bebec1;
+  border-radius: 4px;
+  border: 1px solid var(--color-white);
+}
+input[type='range']:focus::-ms-fill-lower {
+  background: transparent;
+}
+
+input[type='range']::-ms-fill-upper {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #bebec1;
+  border-radius: 4px;
+  border: 1px solid var(--color-white);
+}
+
+input[type='range']:focus::-ms-fill-upper {
+  background: transparent;
+}
+
+// Select styles
+.select {
+  position: relative;
+  color: var(--color-black);
+  width: 100%;
+
+  &__wrap {
+    position: relative;
+    user-select: none;
+  }
+
+  &__default-option {
+    background: var(--color-white);
+    border-radius: 4px;
+    cursor: pointer;
+
+    li {
+      padding: 12px 24px 12px 10px;
+    }
+  }
+
+  &__default-option:before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    width: 6px;
+    height: 6px;
+    border: 2px solid;
+    border-color: transparent transparent #555555 #555555;
+    transform: rotate(-45deg);
+  }
+
+  &__list {
+    position: absolute;
+    z-index: 1;
+    top: 0x;
+    left: 0;
+    width: 100%;
+    background: #272733;
+    border-radius: 4px;
+    border: 1px solid #3d4050;
+    display: none;
+    color: var(--color-white);
+
+    li {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    li:first-child:hover {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    li:last-child:hover {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    li:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+  }
+
+  &--active .select__list {
+    display: block;
+  }
+  .select__default-option.select__list {
+    background: #3d4050;
+  }
+
+  &--active .select__default-option:before {
+    top: 25px;
+    transform: rotate(-225deg);
+  }
+}

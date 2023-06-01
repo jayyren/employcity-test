@@ -1,0 +1,200 @@
+{{! <img src='/assets/page2/promo-1-left.svg' /> }}
+
+<header class='header'>
+  <div class='header__inner'>
+    <img src='/assets/img/logo.png' alt='logo' class='header__logo' />
+    <div class='header__links'>
+      <div class='header__link header__link--active'>Бизнес</div>
+      <div class='header__link'>О нас</div>
+      <div class='header__link'>Цены</div>
+      <div class='header__link'>Оформить заказ</div>
+    </div>
+  </div>
+
+  <svg
+    class='header__burger-btn'
+    width='26'
+    height='26'
+    viewBox='0 0 40 26'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <rect class='header__burger-btn--1' width='40' height='6' rx='3' ry='3' />
+    <rect
+      class='header__burger-btn--2'
+      width='40'
+      height='6'
+      y='10'
+      rx='3'
+      ry='3'
+    />
+    <rect
+      class='header__burger-btn--3'
+      width='40'
+      height='6'
+      y='20'
+      rx='3'
+      ry='3'
+    />
+  </svg>
+
+</header>
+
+<div class='promo'>
+  <div class='promo__inner'>
+    <h2 class='promo__title text--dark'>
+      <span class='text--accent'>Lorem ipsum </span>dolor sit
+      <br />
+      amet consectetur
+      <span class='text--accent'>adipiscing</span>
+    </h2>
+
+    <p class='promo__subtitle'>
+      At vero eos et accusamus et iusto odio dignissimos ducimus!
+    </p>
+    <ul class='promo__list'>
+      <li class='promo__list-text'>Totam rem aperiam eaque ipsa</li>
+      <li class='promo__list-text'>Sit voluptatem accusantium doloremque
+        laudantium</li>
+      <li class='promo__list-text'>Sed ut perspiciatis, unde omnis iste natus
+        error</li>
+    </ul>
+
+    <div class='promo__buttons'>
+      <button class='button button--blue'>заказать</button>
+      <button class='button button--white'>подробнее</button>
+    </div>
+  </div>
+</div>
+
+<div class='order'>
+  <div class='order__inner'>
+    <p class='order__title'>Оформление
+      <span class='text--accent'>Заказа</span></p>
+    <p class='order__subtitle text--secondary'>Перед заполнением формы
+      ознакомьтесь с нашей схемой работы!</p>
+
+    <div class='order__features'>
+      <div class='order__item'>
+        <div class='order__wrap'>
+          <img src='/assets/img/i_magnifier.svg' alt='icon' />
+        </div>
+        <p>Some text</p>
+      </div>
+      <div class='order__item'>
+        <div class='order__wrap'>
+          <img src='/assets/img/i_percentage.svg' alt='icon' />
+        </div>
+        <p>Some text</p>
+      </div>
+      <div class='order__item'>
+        <div class='order__wrap'>
+          <img src='/assets/img/i_document.svg' alt='icon' />
+        </div>
+        <p>Some text</p>
+      </div>
+      <div class='order__item'>
+        <div class='order__wrap'>
+          <img src='/assets/img/i_email.svg' alt='icon' />
+        </div>
+        <p>Some text</p>
+      </div>
+      <div class='order__item'>
+        <div class='order__wrap'>
+          <img src='/assets/img/i_banknote.svg' alt='icon' />
+        </div>
+        <p>Some text</p>
+      </div>
+    </div>
+
+    <form action='POST' class='form'>
+      <div class='form__group'>
+
+        <div class="select form__group-input">
+          <div class="select__wrap">
+              <ul class="select__default-option">
+                  <li>
+                    <div class="select__option">
+                      <p>Pizzas</p>
+                    </div>
+                  </li>
+              </ul>
+
+              <ul class="select__list">
+                  <li>
+                    <div class="select__option">
+                      <p>Pizzas</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="select__option">
+                      <p>Burget</p>
+                    </div>  
+                  </li>
+                  <li>
+                    <div class="select__option">
+                      <p>Ice Cream</p>
+                    </div>  
+                  </li>
+                  <li>
+                  <div class="select__option">
+                      <p>Fried Potatoes</p>
+                  </div>
+                  </li>
+              </ul>
+          </div>
+        </div>
+
+        <input class='form__group-input' name="email" type='email' placeholder='Email' />
+        <input class='form__group-input' name="name" type='text' placeholder='Name' />
+      </div>
+
+      <div class='form__group'>
+        <div class="form__range">
+          <label for='volume' class="form__range-label">
+            <span class="form__range-label-text">Sed ut perspiciatis, unde omnis iste natus</span>
+            <span class="form__range-label-value">75%</span>
+          </label>
+          <input type='range' id='volume' name='volume' min='0' max='100' />
+        </div>
+        <input id='attachFiles' type='file' multiple></input>
+        <label for="attachFiles" class='form__attach button button--white button--icon'>
+          <img src='assets/img/i_clip.svg' alt='attach' />
+          Прикрепить файл
+        </label>
+      </div>
+      <div class='form__group'>
+        <button type='submit' class='button button--blue'>Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer__inner">
+    <p class="footer__copyright">© 2018 «LoremIpsum.net» Все права защищены.</p>
+    <div class="footer__contacts">
+      <div class="footer__item--separator"></div>
+      <div class="footer__item">
+        <img src="/assets/img/qiwi.svg" alt="logo">
+        <span>Qiwi wallet</p>
+      </div>
+      <div class="footer__item">
+        <img src="/assets/img/ym.svg" alt="logo">
+        <span>Yandex Money</p>
+      </div>
+      <div class="footer__item">
+        <img src="/assets/img/wm.svg" alt="logo">
+        <span>Web Money</p>
+      </div>
+      <div class="footer__item--separator"></div>
+      <a class="footer__item" href="email:info@ipsum228.com">
+        <img src="/assets/img/email.svg" alt="logo">
+        <span>info@ipsum228.com</p>
+      </a>
+      <a href="#" class="footer__item">
+        <img src="/assets/img/vk.svg" alt="logo">
+        <span>Мы вконтакте</p>
+      </a>
+    </div>
+  </div>
+</div>

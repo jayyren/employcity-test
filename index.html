@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+  {{> page }}
+
+  <script type="module"
+          src="/src/main.ts"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+          rel="stylesheet"></script>
+</body>
+
+</html>
+
+
+
+<script>
+  // burger
+  const button = document.querySelector('.header__burger-btn');
+  const menu = document.querySelector('.header__links');
+
+  button.addEventListener('click', () => {
+    button.classList.toggle('active');
+    menu.classList.toggle('header__links--active');
+  });
+
+  $(".select__default-option").click(function () {
+    $(this).parent().toggleClass("select--active");
+  })
+
+  // select
+  $(".select__list li").click(function () {
+    var currentele = $(this).html();
+    $(".select__default-option li").html(currentele);
+    $(this).parents(".select__wrap").removeClass("select--active");
+  })
+</script>
